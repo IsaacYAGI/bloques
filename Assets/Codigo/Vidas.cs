@@ -11,6 +11,9 @@ public class Vidas : MonoBehaviour {
 	public Pelota pelota;
 	public Barra barra;
 
+	public GameObject gameOver;
+	public SiguienteNivel siguienteNivel;
+
 	// Use this for initialization
 	void Start () {
 		//textoVidas.text = "Vidas: " + Vidas.vidas;
@@ -18,10 +21,30 @@ public class Vidas : MonoBehaviour {
 	}
 	
 	public void PerderVida(){
+
+		if (Vidas.vidas <= 0)
+			return;
+
 		Vidas.vidas--;
 		ActualizarMarcadorVidas ();
-		barra.Reset ();
-		pelota.Reset ();
+
+		if (Vidas.vidas <= 0) {
+			//Mostrar Gameover
+			gameOver.SetActive(true);
+			//Se detiene la pelota
+			pelota.DetenerMovimiento ();
+			//Se desactiva el script del objeto barra para evitar su movimiento
+			barra.enabled = false;
+			//Al perder todas las vidas, se debe especificar la pantalla a redirigir
+			siguienteNivel.nivelACargar = "Portada";
+			//Y luego activar la pantalla
+			siguienteNivel.ActivarCarga ();
+		}else{
+			barra.Reset ();
+			pelota.Reset ();
+		}
+
+
 	}
 
 	void ActualizarMarcadorVidas(){
