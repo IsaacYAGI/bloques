@@ -19,9 +19,10 @@ public class SonidosPelota : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider otro){
-		if (otro.gameObject.CompareTag ("Suelo")) {
-			error.Play ();
+		if (Vidas.vidas != 0) {
+			if (otro.gameObject.CompareTag ("Suelo")) {
+				error.Play ();
+			}
 		}
-
 	}
 }
