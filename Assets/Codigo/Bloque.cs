@@ -10,8 +10,9 @@ public class Bloque : MonoBehaviour {
 	//is Trigger desactivado, los objetos son solidos
 	void OnCollisionEnter(){
 		Instantiate (efectoParticulas,transform.position, Quaternion.identity);
-		puntos.GanarPunto ();
 		Destroy (gameObject);
+		transform.SetParent (null);
+		puntos.GanarPunto ();
 	}
 
 	//Is trigger activado, los objetos se atraviesan
