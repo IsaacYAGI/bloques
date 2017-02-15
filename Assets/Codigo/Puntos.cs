@@ -17,6 +17,8 @@ public class Puntos : MonoBehaviour {
 
 	public Transform contenedorBloques;
 
+	public SonidosFinPartida sonidosFinPartida;
+
 	void ActualizarMarcadorPuntos(){
 		textoPuntos.text = "Puntos: " + Puntos.puntos;
 	}
@@ -40,6 +42,8 @@ public class Puntos : MonoBehaviour {
 			}else{
 				nivelCompletado.SetActive (true);
 			}
+
+			sonidosFinPartida.NivelCompletado ();
 
 			siguienteNivel.ActivarCarga ();
 		}
