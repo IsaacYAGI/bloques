@@ -8,6 +8,7 @@ public class SonidosPelota : MonoBehaviour {
 
 	public AudioSource rebote;
 	public AudioSource punto;
+	public AudioSource error;
 
 	void OnCollisionEnter(Collision otro){
 		if (otro.gameObject.CompareTag ("Bloque")) {
@@ -15,5 +16,12 @@ public class SonidosPelota : MonoBehaviour {
 		} else {
 			rebote.Play ();
 		}
+	}
+
+	void OnTriggerEnter(Collider otro){
+		if (otro.gameObject.CompareTag ("Suelo")) {
+			error.Play ();
+		}
+
 	}
 }
