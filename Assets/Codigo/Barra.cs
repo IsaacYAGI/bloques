@@ -8,6 +8,9 @@ public class Barra : MonoBehaviour {
 
 	Vector3 posInicial;
 
+	public ElementoInteractivo botonIzquierda;
+	public ElementoInteractivo botonDerecha;
+
 	// Use this for initialization
 	void Start () {
 		//Debug.Log ("Start");
@@ -24,7 +27,20 @@ public class Barra : MonoBehaviour {
 		//-1 si es eje negativo
 		//0 si no se pulsa nada
 		//1 si es eje positivo
-		float tecladoHorizontal = Input.GetAxisRaw("Horizontal");
+
+		float tecladoHorizontal;
+
+		if (botonIzquierda.pulsado) {
+			tecladoHorizontal = -1f;
+		} else {
+			if (botonDerecha.pulsado) {
+				tecladoHorizontal = 1f;
+			} else {
+				tecladoHorizontal = Input.GetAxisRaw ("Horizontal");
+			}
+		}
+
+		//float tecladoHorizontal = Input.GetAxisRaw("Horizontal");
 
 		float posX = transform.position.x + (tecladoHorizontal * velocidad * Time.deltaTime);
 		transform.position = new Vector3(Mathf.Clamp(posX,-8,8),transform.position.y,transform.position.z);
