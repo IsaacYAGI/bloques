@@ -10,6 +10,14 @@ public class BloqueLvl2 : Bloque{
 	void OnCollisionEnter(){
 		if (golpesRecibidos != CANTIDAD_GOLPES_PARA_DESTRUIR) {
 			golpesRecibidos++;
+
+			//Si en el proximo golpe se va a destruir el bloque
+			/*
+			if (isProximoGolpeDestruye()) {
+				//Se cambia el color del bloque
+
+			}
+			*/
 		}else{
 			Instantiate (efectoParticulas,transform.position, Quaternion.identity);
 			Destroy (gameObject);
@@ -18,4 +26,9 @@ public class BloqueLvl2 : Bloque{
 		}
 
 	}
+	/*
+	bool isProximoGolpeDestruye(){
+		return golpesRecibidos == CANTIDAD_GOLPES_PARA_DESTRUIR;
+	}
+	*/
 }
