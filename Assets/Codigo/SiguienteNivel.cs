@@ -15,6 +15,11 @@ public class SiguienteNivel : MonoBehaviour {
 
 	void CargarNivel(){
 
+		//Si al terminar el nivel en juego, no es el ultimo nivel, se le suma una vida al jugador
+		if (!EsUltimoNivel ()) {
+			Vidas.vidas++;
+		}
+
 		SceneManager.LoadScene (nivelACargar);
 	}
 
