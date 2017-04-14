@@ -14,6 +14,8 @@ public class Pelota : MonoBehaviour {
 
 	public Transform barra;
 
+	public ElementoInteractivo pantalla;
+
 	/*
 	void Awake(){
 		rig = GetComponent<Rigidbody> ();
@@ -49,7 +51,7 @@ public class Pelota : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (!isJuegoIniciado && Input.GetButtonDown ("Fire1")) {
+		if (!isJuegoIniciado && (Input.GetButtonDown ("Fire1") || pantalla.pulsado)) {
 			isJuegoIniciado = true;
 			transform.SetParent (null);
 			rig.isKinematic = false;
