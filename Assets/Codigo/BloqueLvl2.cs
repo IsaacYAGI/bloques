@@ -5,10 +5,11 @@ using UnityEngine;
 public class BloqueLvl2 : Bloque{
 
 	public int CANTIDAD_GOLPES_PARA_DESTRUIR = 2;
+	private int golpesRecibidos = 1;
 
 	void OnCollisionEnter(){
-		if (CANTIDAD_GOLPES_PARA_DESTRUIR == 2) {
-			CANTIDAD_GOLPES_PARA_DESTRUIR--;
+		if (golpesRecibidos != CANTIDAD_GOLPES_PARA_DESTRUIR) {
+			golpesRecibidos++;
 		}else{
 			Instantiate (efectoParticulas,transform.position, Quaternion.identity);
 			Destroy (gameObject);
