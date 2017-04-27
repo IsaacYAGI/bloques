@@ -4,19 +4,19 @@ Bloques! es un juego clasico de breakout que fue creado siguiendo el tutorial de
 
 Si quieres acceder al curso [haz clic aquí](https://www.youtube.com/playlist?list=PLREdURb87ks3iypIlK-4RyW3ek6gXwEf7).
 
-##Clone
+## Clone
 
 ```shell
 git clone https://github.com/IsaacYAGI/bloques.git
 cd bloques
 ```
 
-##Corrida
+## Corrida
 Una vez clonado el juego simplemente abrir el proyecto en Unity3D. La versión utilizada fue **Unity 5.5.0f3** por lo que se recomienda se utilice la misma.
 
 Una vez abierto el proyecto, simplemente presionar el botón play :).
 
-##Compilación
+## Compilación
 Si se desea, se puede compilar el proyecto para PC y Android. Para ello se deben seguir los siguientes pasos:
 
 - Ir al menú **File** y elegir la opción **Build Settings**.
