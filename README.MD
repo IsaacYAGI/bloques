@@ -24,3 +24,5 @@ Si se desea, se puede compilar el proyecto para PC y Android. Para ello se deben
 - Presionar el botón **Build** y elegir la ruta donde se guardarán los ejecutables.
 
 Para mayor información sobre esto puedes ver los videos originales donde explican este punto [haciendo clic aquí para PC](https://www.youtube.com/watch?v=hO7OwwURLNY&list=PLREdURb87ks3iypIlK-4RyW3ek6gXwEf7&index=17) y [haciendo clic aquí para Android](https://www.youtube.com/watch?v=iOvU7xsj6do&index=20&list=PLREdURb87ks3iypIlK-4RyW3ek6gXwEf7).
+
+De todas maneras se puede acceder a los binarios ya compilados de cada versión tagueada en el apartado de [releases](https://github.com/IsaacYAGI/bloques/releases) en el repositorio.
