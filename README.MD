@@ -16,7 +16,7 @@ Una vez clonado el juego simplemente abrir el proyecto en Unity3D. La versión u
 
 Una vez abierto el proyecto, simplemente presionar el botón play :).
 
-####Controles
+#### Controles
 
 **PC**
 
