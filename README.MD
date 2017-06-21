@@ -16,6 +16,22 @@ Una vez clonado el juego simplemente abrir el proyecto en Unity3D. La versión u
 
 Una vez abierto el proyecto, simplemente presionar el botón play :).
 
+####Controles
+
+**PC**
+
+* Ctrl-left: Para empezar el juego.
+* Left key: Para mover la barra a la izquierda.
+* Right key: para mover la barra a la derecha.
+* Esc: Para salir del juego.
+
+**Android**
+
+* Tocar la pantalla para iniciar el juego.
+* Left button: Para mover la barra a la izquierda.
+* Right button: Para mover la barra a la derecha.
+* Back button: Para salir del juego.
+
 ## Compilación
 Si se desea, se puede compilar el proyecto para PC y Android. Para ello se deben seguir los siguientes pasos:
 
